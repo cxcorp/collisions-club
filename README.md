@@ -1,6 +1,9 @@
 # collisions-club
 Microservice for generating strings which all produce the same Java hashCode. Collision generation based on original research.
 
+## Why?
+`¯\_(ツ)_/¯`
+
 ## Download
 See [Releases](https://github.com/cxcorp/collisions-club/releases).
 
