@@ -73,3 +73,5 @@ Response
 
 ## License
 collisions-club is licensed under the MIT License. See `LICENSE`.
+
+collisions-club uses third party libraries that are distributed under their own tems. See `LICENSE-3RD-PARTY`.
