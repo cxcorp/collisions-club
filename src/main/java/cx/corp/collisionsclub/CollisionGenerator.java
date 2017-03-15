@@ -30,8 +30,10 @@ public class CollisionGenerator {
     }
 
     public String generate() {
-        randomizeCoefficients();
-        calculateBuffer();
+        do {
+            randomizeCoefficients();
+            calculateBuffer();
+        } while (bufferHasIllegalCodePoints());
         return bufferAsString();
     }
 
@@ -58,5 +60,18 @@ public class CollisionGenerator {
 
     private String bufferAsString() {
         return new String(buffer);
+    }
+
+    private boolean bufferHasIllegalCodePoints() {
+        for (int i = 0; i < buffer.length; i++) {
+            if (isUtf16Surrogate(buffer[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean isUtf16Surrogate(int codepoint) {
+        return codepoint >= 0xD800 && codepoint <= 0xDFFF;
     }
 }
