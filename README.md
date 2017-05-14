@@ -5,7 +5,13 @@ Microservice for generating strings which all produce the same Java hashCode. No
 `¯\_(ツ)_/¯`
 
 ## Try it
+The service is up and running at this address:
+
 http://billion.collisions.club/generate?string_length=4&count=5
+
+You can also execute this Java fiddle to see that all of the strings returned indeed have the same `hashCode`:
+
+https://www.tutorialspoint.com/viewproject.php?URL=compile_java8_online.php&PID=0Bw_CjBb95KQMSWpDWVdGZHBzX3M
 
 ## API Endpoints
 ### `GET /generate`
