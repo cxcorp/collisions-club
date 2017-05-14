@@ -1,11 +1,10 @@
 # collisions-club
-Microservice for generating strings which all produce the same Java hashCode. Collision generation based on original research.
+Microservice for generating strings which all produce the same Java hashCode. Note that the generated output is almost always outside the ASCII range.
 
 ## Why?
 `¯\_(ツ)_/¯`
 
 ## Try it
-
 http://billion.collisions.club/generate?string_length=4&count=5
 
 ## API Endpoints
