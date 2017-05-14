@@ -4,12 +4,9 @@ Microservice for generating strings which all produce the same Java hashCode. Co
 ## Why?
 `¯\_(ツ)_/¯`
 
-## Download
-See [Releases](https://github.com/cxcorp/collisions-club/releases).
+## Try it
 
-## Running
-1. Build or [download](https://github.com/cxcorp/collisions-club/releases) the `jar`.
-2. Run the jar: `java -jar collisions-club-<version>.jar`.
+http://billion.collisions.club/generate?string_length=4&count=5
 
 ## API Endpoints
 ### `GET /generate`
@@ -18,7 +15,7 @@ Generates specified amount of strings which all produce the same `hashCode` in J
 | Parameter | Description | Type |
 |-----------|-------------|------|
 | count | Amount of strings to generate. Must be inside range 1...1024 (inclusive). | int32 |
-| string_length | Length of strings to generate. Currently only value supported is 4. | int32 |
+| string_length | Length of strings to generate (amount of UTF-16 code units, no guarantees about the byte count of the UTF-8 output). Currently only value supported is 4. | int32 |
 | seed | (*Optional*) The seed to use for the random number generator. | int64 |
 
 #### Example
@@ -68,6 +65,12 @@ Response
 }
 ```
 
+## Download
+See [Releases](https://github.com/cxcorp/collisions-club/releases).
+
+## Running
+1. Build or [download](https://github.com/cxcorp/collisions-club/releases) the `jar`.
+2. Run the jar: `java -jar collisions-club-<version>.jar`.
 
 ## Building
 1. Download or install [Apache Maven](https://maven.apache.org/install.html).
