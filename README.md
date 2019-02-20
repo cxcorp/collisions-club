@@ -20,6 +20,8 @@ where
 
 `0 <= c <= b <= a <= 2114`
 
+The magic number `2114` is derived from `0xFFFF / 31` where 0xFFFF is the maximum value of an UTF-16 code point (Java uses UTF-16 internally!) and 31 is the multiplier used by the Java `hashCode` algorithm.
+
 ## Try it
 The service is up and running at this address:
 
