@@ -4,10 +4,26 @@ Microservice for generating strings which all produce the same Java hashCode. No
 ## Why?
 `¯\_(ツ)_/¯`
 
+## The formula
+The generator abuses the fact that in Java, `String::hashCode` essentially sums every character's value, multiplying by `31` at each iteration.
+
+Knowing this, we can trivially generate colliding strings. For example, for four characters, the formula would be:
+
+```java
+arr[0] = 2114 - a
+arr[1] = a * 31 - b
+arr[2] = b * 31 - c
+arr[3] = c * 31
+```
+
+where
+
+`0 <= c <= b <= a <= 2114`
+
 ## Try it
 The service is up and running at this address:
 
-http://billion.collisions.club/generate?string_length=4&count=5
+https://collisions-club.herokuapp.com/generate?string_length=4&count=5
 
 You can also execute this Java fiddle to see that all of the strings returned indeed have the same `hashCode`:
 
