@@ -23,10 +23,6 @@ where
 The magic number `2114` is derived from `0xFFFF / 31` where 0xFFFF is the maximum value of an UTF-16 code point (Java uses UTF-16 internally!) and 31 is the multiplier used by the Java `hashCode` algorithm.
 
 ## Try it
-The service is up and running at this address:
-
-https://collisions-club.herokuapp.com/generate?string_length=4&count=5
-
 You can also execute this Java fiddle to see that all of the strings returned indeed have the same `hashCode`:
 
 https://www.tutorialspoint.com/viewproject.php?URL=compile_java8_online.php&PID=0Bw_CjBb95KQMSWpDWVdGZHBzX3M
